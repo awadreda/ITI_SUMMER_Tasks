@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/Tasks_For_ITI_MVC.props" />
+</Project>

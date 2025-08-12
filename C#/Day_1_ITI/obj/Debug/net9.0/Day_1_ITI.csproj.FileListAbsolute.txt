@@ -1,0 +1,14 @@
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/bin/Debug/net9.0/Day_1_ITI
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/bin/Debug/net9.0/Day_1_ITI.deps.json
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/bin/Debug/net9.0/Day_1_ITI.runtimeconfig.json
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/bin/Debug/net9.0/Day_1_ITI.dll
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/bin/Debug/net9.0/Day_1_ITI.pdb
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.GeneratedMSBuildEditorConfig.editorconfig
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.AssemblyInfoInputs.cache
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.AssemblyInfo.cs
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.csproj.CoreCompileInputs.cache
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.dll
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/refint/Day_1_ITI.dll
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.pdb
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/Day_1_ITI.genruntimeconfig.cache
+/home/awad/Main.OS.Files/Dev/ITI_Summer/C#/Day_1_ITI/obj/Debug/net9.0/ref/Day_1_ITI.dll

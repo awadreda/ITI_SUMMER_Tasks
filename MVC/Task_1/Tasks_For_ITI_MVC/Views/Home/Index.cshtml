@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <h1>Welcome to ITI MVC Tasks</h1>
+    <p>Please choose a task:</p>
+
+    <div class="d-flex gap-3">
+        <a href="@Url.Action("Index", "Month")" class="btn btn-primary">Task 1 - Month Clothes</a>
+        <a href="@Url.Action("Index", "Product")" class="btn btn-success">Task 2 - Products</a>
+    </div>
+</div>
