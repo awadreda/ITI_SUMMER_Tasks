@@ -1,0 +1,30 @@
+@model IEnumerable<Booking>
+@{
+    ViewData["Title"] = "My Bookings";
+    Layout = "_Layout";
+}
+
+<h2 class="mb-3">My Bookings</h2>
+<table class="table table-bordered shadow">
+    <thead class="table-dark">
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Organizer</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var booking in Model)
+    {
+        <tr>
+            <td>@booking.Event.Title</td>
+            <td>@booking.Event.Date.ToShortDateString()</td>
+            <td>@booking.Event.OrganizerName</td>
+            <td>
+                <a class="btn btn-sm btn-info" asp-controller="Event" asp-action="Details" asp-route-id="@booking.EventId">Details</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

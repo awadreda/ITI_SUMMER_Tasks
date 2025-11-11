@@ -1,0 +1,33 @@
+@model Event_Booking_System_MVC.Models.Event
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 500px;">
+        <h2 class="text-center mb-4">Create Event</h2>
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input asp-for="Title" class="form-control" required />
+                <span asp-validation-for="Title" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
+                <span asp-validation-for="Description" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Date" class="form-label">Date</label>
+                <input asp-for="Date" type="date" class="form-control" required />
+                <span asp-validation-for="Date" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="OrganizerName" class="form-label">Organizer Name</label>
+                <input asp-for="OrganizerName" class="form-control" required />
+                <span asp-validation-for="OrganizerName" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Create</button>
+        </form>
+        <p class="text-center mt-3">
+            <a asp-action="Index">Back to Events</a>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+@model Event_Booking_System_MVC.Models.Event
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light p-3">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 500px;">
+        <h2 class="text-center mb-4">Edit Event</h2>
+        <form asp-action="Edit" method="post">
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input asp-for="Title" class="form-control" required />
+                <span asp-validation-for="Title" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
+                <span asp-validation-for="Description" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Date" class="form-label">Date</label>
+                <input asp-for="Date" type="date" class="form-control" required />
+                <span asp-validation-for="Date" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="OrganizerName" class="form-label">Organizer Name</label>
+                <input asp-for="OrganizerName" class="form-control" required />
+                <span asp-validation-for="OrganizerName" class="text-danger small"></span>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+        </form>
+        <p class="text-center mt-3"><a asp-action="Index">Back to Events</a></p>
+
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div class="text-danger small mt-1">@error.ErrorMessage</div>
+        }
+    </div>
+</div>

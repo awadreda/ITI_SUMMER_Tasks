@@ -1,0 +1,50 @@
+@model StudentMVC_ITI.Models.ViewModels.AddDepartmentVM
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary">Add Department</h2>
+
+    <form asp-action="Add" method="post" class="card shadow p-4">
+        <div class="mb-3">
+            <label asp-for="DeptName" class="form-label"></label>
+            <input asp-for="DeptName" class="form-control" />
+            <span asp-validation-for="DeptName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DeptDesc" class="form-label"></label>
+            <input asp-for="DeptDesc" class="form-control" />
+            <span asp-validation-for="DeptDesc" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DeptLocation" class="form-label"></label>
+            <input asp-for="DeptLocation" class="form-control" />
+            <span asp-validation-for="DeptLocation" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DeptManager" class="form-label"></label>
+            <input asp-for="DeptManager" type="number" class="form-control" />
+            <span asp-validation-for="DeptManager" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ManagerHiredate" class="form-label"></label>
+            <input asp-for="ManagerHiredate" type="date" class="form-control" />
+            <span asp-validation-for="ManagerHiredate" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <a asp-action="GetAll" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Back to List
+            </a>
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-save"></i> Save
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

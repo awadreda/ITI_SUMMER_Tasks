@@ -1,0 +1,40 @@
+@model List<StudentMVC_ITI.Models.ViewModels.StudentListVM>
+
+@{
+    ViewData["Title"] = "All Students";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-primary">📋 All Students</h2>
+
+    <table class="table table-hover table-striped shadow-sm rounded">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Manager</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.StName</td>
+                <td>@s.StAge</td>
+                <td>@s.DeptName</td>
+                <td>@s.ManagerName</td>
+                <td>
+                    <a class="btn btn-sm btn-info text-white" 
+                       asp-controller="Student" 
+                       asp-action="Details" 
+                       asp-route-id="@s.Id">
+                        View Details
+                    </a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

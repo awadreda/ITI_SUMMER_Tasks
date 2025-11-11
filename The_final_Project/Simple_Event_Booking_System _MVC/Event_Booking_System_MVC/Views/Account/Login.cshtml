@@ -1,0 +1,27 @@
+@model Event_Booking_System_MVC.Models.ModelViews.LoginViewModel
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">Login</h2>
+        <form asp-action="Login" method="post">
+            <div class="mb-3">
+                <label asp-for="UserName" class="form-label">Username</label>
+                <input asp-for="UserName" class="form-control" placeholder="Enter username" required />
+                <span asp-validation-for="UserName" class="text-danger small"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input asp-for="Password" type="password" class="form-control" placeholder="Enter password" required />
+                <span asp-validation-for="Password" class="text-danger small"></span>
+            </div>
+            @if (!string.IsNullOrEmpty(Model?.ErrorMessage))
+            {
+                <div class="text-danger text-center mb-2">@Model.ErrorMessage</div>
+            }
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+        <p class="text-center mt-3">
+            Don't have an account? <a asp-action="Register">Register here</a>
+        </p>
+    </div>
+</div>

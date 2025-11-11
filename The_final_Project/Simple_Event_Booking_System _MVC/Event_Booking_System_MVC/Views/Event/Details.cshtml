@@ -1,0 +1,27 @@
+@model Event_Booking_System_MVC.Models.ModelViews.EventDetailsViewModel
+
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light p-3">
+    <div class="card shadow-sm p-4" style="width: 100%; max-width: 600px;">
+        <h2 class="text-center mb-4">@Model.Title</h2>
+        <ul class="list-group list-group-flush mb-3">
+            <li class="list-group-item"><strong>Description:</strong> @Model.Description</li>
+            <li class="list-group-item"><strong>Date:</strong> @Model.Date.ToString("yyyy-MM-dd")</li>
+            <li class="list-group-item"><strong>Organizer:</strong> @Model.OrganizerName</li>
+        </ul>
+        <div class="text-center mb-3">
+            @if (!Model.UserHasBooked)
+            {
+                <a asp-controller="Booking" asp-action="Book" asp-route-id="@Model.Id" class="btn btn-primary">
+                    Book This Event
+                </a>
+            }
+            else
+            {
+                <span class="text-success fw-bold">You have already booked this event.</span>
+            }
+        </div>
+        <p class="text-center">
+            <a asp-action="Index">Back to Events</a>
+        </p>
+    </div>
+</div>

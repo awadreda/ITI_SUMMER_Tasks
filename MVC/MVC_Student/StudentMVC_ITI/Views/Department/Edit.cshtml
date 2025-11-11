@@ -1,0 +1,28 @@
+
+@model StudentMVC_ITI.Models.ViewModels.DepartmentVM
+@{
+    ViewData["Title"] = "Edit";
+}
+<h3>Edit Department</h3>
+<form asp-action="Edit" method="post" class="card card-body">
+    <input type="hidden" asp-for="Id" />
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label"></label>
+        <select asp-for="Location" asp-items="Model.Locations" class="form-select">
+            <option value="">-- select location --</option>
+        </select>
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    <div class="d-flex gap-2">
+        <button type="submit" class="btn btn-warning">Update</button>
+        <a class="btn btn-secondary" asp-action="Index">Back</a>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

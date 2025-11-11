@@ -1,0 +1,35 @@
+@model IEnumerable<Event_Booking_System_MVC.Models.Booking>
+
+<div class="container mt-4">
+    <h2 class="mb-4 text-center">🎟️ My Booked Events</h2>
+
+    <table class="table table-striped table-hover table-bordered shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Event</th>
+                <th scope="col">Date</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var b in Model)
+            {
+                <tr>
+                    <td>@b.Event.Title</td>
+                    <td>@b.Event.Date.ToString("yyyy-MM-dd")</td>
+                    <td class="text-center">
+                        <a class="btn btn-sm btn-primary" asp-controller="Event" asp-action="Details" asp-route-id="@b.EventId">
+                            <i class="bi bi-eye"></i> Details
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-center mt-3">
+        <a class="btn btn-secondary" asp-controller="Event" asp-action="Index">
+            <i class="bi bi-arrow-left"></i> Back to Events
+        </a>
+    </div>
+</div>
